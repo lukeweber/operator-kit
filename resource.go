@@ -24,12 +24,10 @@ import (
 	"fmt"
 	"time"
 
-	"k8s.io/api/extensions/v1beta1"
 	apiextensionsv1beta1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1"
 	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	errorsUtil "k8s.io/apimachinery/pkg/util/errors"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/kubernetes/pkg/util/version"
