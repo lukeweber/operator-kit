@@ -11,7 +11,6 @@ The library originated from the Rook operator but is independent. Much more thou
 ### Features
 The operator kit is a simple collection of features that will be useful for operators.
 - **CRD handling**: creating, retrieving, and watching CRDs on K8s 1.7+
-- **TPR handling**: creating, retrieving, and watching TPRs on versions prior to 1.7
 - **Timing**: helpers to timeout when taking too long or retry when when working with kubernetes resources
 
 
