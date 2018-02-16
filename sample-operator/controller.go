@@ -22,7 +22,7 @@ import (
 
 	opkit "github.com/rook/operator-kit"
 	sample "github.com/rook/operator-kit/sample-operator/pkg/apis/myproject/v1alpha1"
-	sampleclient "github.com/rook/operator-kit/sample-operator/pkg/client/clientset/versioned/typed/myproject/v1alpha1"
+	sampleclient "github.com/rook/operator-kit/sample-operator/pkg/generated/clientset/versioned/typed/myproject/v1alpha1"
 	"k8s.io/client-go/tools/cache"
 )
 
@@ -42,13 +42,14 @@ func newSampleController(context *opkit.Context, sampleClientset sampleclient.My
 
 // Watch watches for instances of Sample custom resources and acts on them
 func (c *SampleController) StartWatch(namespace string, stopCh chan struct{}) error {
+	restClient := c.sampleClientset.RESTClient()
 
 	resourceHandlers := cache.ResourceEventHandlerFuncs{
 		AddFunc:    c.onAdd,
 		UpdateFunc: c.onUpdate,
 		DeleteFunc: c.onDelete,
 	}
-	restClient := c.sampleClientset.RESTClient()
+
 	watcher := opkit.NewWatcher(sample.SampleResource, namespace, resourceHandlers, restClient)
 	go watcher.Watch(&sample.Sample{}, stopCh)
 	return nil

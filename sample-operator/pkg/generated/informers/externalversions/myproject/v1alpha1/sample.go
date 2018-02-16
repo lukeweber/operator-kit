@@ -20,9 +20,9 @@ package v1alpha1
 
 import (
 	myproject_v1alpha1 "github.com/rook/operator-kit/sample-operator/pkg/apis/myproject/v1alpha1"
-	versioned "github.com/rook/operator-kit/sample-operator/pkg/client/clientset/versioned"
-	internalinterfaces "github.com/rook/operator-kit/sample-operator/pkg/client/informers/externalversions/internalinterfaces"
-	v1alpha1 "github.com/rook/operator-kit/sample-operator/pkg/client/listers/myproject/v1alpha1"
+	versioned "github.com/rook/operator-kit/sample-operator/pkg/generated/clientset/versioned"
+	internalinterfaces "github.com/rook/operator-kit/sample-operator/pkg/generated/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/rook/operator-kit/sample-operator/pkg/generated/listers/myproject/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"

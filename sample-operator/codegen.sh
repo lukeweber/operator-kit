@@ -18,7 +18,7 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 cd ${scriptdir}/../vendor/k8s.io/code-generator && ./generate-groups.sh \
   all \
-  github.com/rook/operator-kit/sample-operator/pkg/client \
+  github.com/rook/operator-kit/sample-operator/pkg/generated \
   github.com/rook/operator-kit/sample-operator/pkg/apis \
   "myproject:v1alpha1" \
   --go-header-file ${scriptdir}/../vendor/k8s.io/kubernetes/hack/boilerplate/boilerplate.go.txt

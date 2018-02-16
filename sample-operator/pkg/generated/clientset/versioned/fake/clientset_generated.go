@@ -17,9 +17,9 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/rook/operator-kit/sample-operator/pkg/client/clientset/versioned"
-	myprojectv1alpha1 "github.com/rook/operator-kit/sample-operator/pkg/client/clientset/versioned/typed/myproject/v1alpha1"
-	fakemyprojectv1alpha1 "github.com/rook/operator-kit/sample-operator/pkg/client/clientset/versioned/typed/myproject/v1alpha1/fake"
+	clientset "github.com/rook/operator-kit/sample-operator/pkg/generated/clientset/versioned"
+	myprojectv1alpha1 "github.com/rook/operator-kit/sample-operator/pkg/generated/clientset/versioned/typed/myproject/v1alpha1"
+	fakemyprojectv1alpha1 "github.com/rook/operator-kit/sample-operator/pkg/generated/clientset/versioned/typed/myproject/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

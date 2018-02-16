@@ -18,7 +18,7 @@ package v1alpha1
 
 import (
 	v1alpha1 "github.com/rook/operator-kit/sample-operator/pkg/apis/myproject/v1alpha1"
-	"github.com/rook/operator-kit/sample-operator/pkg/client/clientset/versioned/scheme"
+	"github.com/rook/operator-kit/sample-operator/pkg/generated/clientset/versioned/scheme"
 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
 	rest "k8s.io/client-go/rest"
 )
